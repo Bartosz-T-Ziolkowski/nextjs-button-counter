@@ -5,6 +5,6 @@ This is a simple button counter application created with React and Next.js which
 ## How to run locally:
 1. Download the repository files.
 2. In the Command prompt, run the following:
-npm install
-npm run dev
+  * npm install
+  * npm run dev
 3. Open a browser and visit http://localhost:3000
