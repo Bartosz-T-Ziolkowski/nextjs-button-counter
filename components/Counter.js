@@ -8,7 +8,7 @@ export default function Counter({ initialCount = 0, initialStep = 1}) {
     function handleIncrease() {
         setCount(prev => prev + step);
     }
-}
+
 
 function handleDecrease() {
     if (count - step >= 0) {
@@ -17,11 +17,11 @@ function handleDecrease() {
 }
 
 function handleReset() {
-    setcount(0);
+    setCount(0);
 }
 
 function handleStepChange(e) {
-    const newstep = Number(e.target.value);
+    const newStep = Number(e.target.value);
     if (newStep >= 1) {
         setStep(newStep);
     }
@@ -30,9 +30,9 @@ function handleStepChange(e) {
 return (
     <div>
         <p aria-live="polite">Current Count: {count}</p>
-        <button onCLick={handleIncrease}>+{step}</button>
-        <button onCLick={handleDecrease} disabled={count - step < 0}>-{step}</button>
-        <button onCLick={handleReset}>Reset</button>
+        <button onClick={handleIncrease}>+{step}</button>
+        <button onClick={handleDecrease} disabled={count - step < 0}>-{step}</button>
+        <button onClick={handleReset}>Reset</button>
         <div>
             <label htmlFor="step">Step: </label>
             <input
@@ -44,4 +44,5 @@ return (
                 />
         </div>
     </div>
-);
+    );
+}
